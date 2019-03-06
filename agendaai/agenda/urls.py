@@ -22,4 +22,8 @@ urlpatterns = [
 	path('day/<int:pk>/', views.DayDetail.as_view(), name=views.DayDetail.name),
 	path('horario/',views.HorarioList.as_view(), name=views.HorarioList.name),
 	path('horario/<int:pk>/', views.HorarioDetail.as_view(), name=views.HorarioDetail.name),
+	path('agenda/',views.AgendaList.as_view(), name=views.AgendaList.name),
+	path('agenda/<int:pk>/', views.AgendaDetail.as_view(), name=views.AgendaDetail.name),
+	path('atendimento/',views.AtendimentoList.as_view(), name=views.AtendimentoList.name),
+	path('atendimento/<int:pk>/', views.AtendimentoDetail.as_view(), name=views.AtendimentoDetail.name),
 ]

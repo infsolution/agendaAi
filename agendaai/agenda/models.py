@@ -38,7 +38,8 @@ class Professional(models.Model):
 	usuario = models.OneToOneField(User, related_name='professional', on_delete=models.CASCADE)
 	profession = models.OneToOneField(Profession, related_name='profession', on_delete=models.CASCADE)
 	business = models.ForeignKey(Business, related_name='professionals', on_delete=models.CASCADE, null=True)
-
+	def __str__(self):
+		return self.usuario.username
 
 class Day(models.Model):
 	name = models.CharField(max_length=29)#explicitar como unico
@@ -49,6 +50,8 @@ class Horario(models.Model):
 	day = models.ForeignKey(Day, related_name='day', on_delete=models.CASCADE)# Na views criar validação para não repetir o mesmo inicio e fim
 	init = models.CharField(max_length=5)
 	end = models.CharField(max_length=5)
+	def __str__(self):
+		return self.day.name+' de '+self.init+' às '+self.end
 
 
 class Agenda(models.Model):

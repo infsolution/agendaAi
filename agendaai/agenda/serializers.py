@@ -49,7 +49,7 @@ class HorarioSerializer(serializers.HyperlinkedModelSerializer):
 class AgendaSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
 		model = Agenda
-		fields = ('url', 'pk', 'business', 'professional', 'horario', 'confirmed', 'usuario')
+		fields = ('url', 'pk', 'business', 'professional', 'horario', 'confirmed', 'cliente')
 
 
 class AtendimentoSerializer(serializers.HyperlinkedModelSerializer):

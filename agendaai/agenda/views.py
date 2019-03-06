@@ -92,6 +92,22 @@ class HorarioDetail(generics.RetrieveUpdateDestroyAPIView):
 	queryset = Horario.objects.all()
 	serializer_class = HorarioSerializer
 	name = 'horario-detail'
+
+class HorarioList(generics.ListCreateAPIView):
+	queryset = Horario.objects.all()
+	serializer_class = HorarioSerializer
+	name = 'horario-list'
+
+class AgendaList(generics.ListCreateAPIView):
+	queryset = Agenda.objects.all()
+	serializer_class = AgendaSerializer
+	name = 'agenda-list'
+
+class AgendaDetail(generics.RetrieveUpdateDestroyAPIView):
+	queryset = Agenda.objects.all()
+	serializer_class = AgendaSerializer
+	name = 'agenda-detail'	
+
 class AtendimentoList(generics.ListCreateAPIView):
 	queryset = Atendimento.objects.all()
 	serializer_class = AtendimentoSerializer
